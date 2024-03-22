@@ -1,12 +1,29 @@
 package org.example;
 
-public class Main {
-    public static void main(String[] args) {
+import org.apache.commons.configuration2.Configuration;
+import org.apache.commons.configuration2.builder.fluent.Configurations;
+import org.apache.commons.configuration2.ex.ConfigurationException;
+import org.apache.commons.configuration2.plist.PropertyListConfiguration;
 
-        System.out.println("This is the first change! Made in main branch");
-        System.out.println("This is the first change in New Branch");
-        System.out.println("This is made in newBranch again!");
-        System.out.println("Okay");
+import java.io.File;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) throws InstantiationException {
+
+
+        SensorTypeRepository sensorTypeRepository = new SensorTypeRepository();
+        SensorTypeFactory sensorTypeFactory = new SensorTypeFactory();
+
+        SensorTypeService sensorTypeService = new SensorTypeService(sensorTypeRepository,sensorTypeFactory);
+
+
+
+        System.out.println(sensorTypeService.getAllSensorTypes());
+
 
     }
+
+
+
 }
