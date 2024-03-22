@@ -1,4 +1,4 @@
-package org.example;
+package org.example.SingleSensorType;
 
 public enum Type {
 

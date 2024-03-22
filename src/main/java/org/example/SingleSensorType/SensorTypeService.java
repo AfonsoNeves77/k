@@ -1,8 +1,10 @@
-package org.example;
+package org.example.SingleSensorType;
 
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import org.example.SingleSensorType.SensorType;
+import org.example.SingleSensorType.SensorTypeFactory;
 
 import java.io.File;
 import java.util.ArrayList;

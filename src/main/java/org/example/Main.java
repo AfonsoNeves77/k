@@ -1,12 +1,6 @@
 package org.example;
 
-import org.apache.commons.configuration2.Configuration;
-import org.apache.commons.configuration2.builder.fluent.Configurations;
-import org.apache.commons.configuration2.ex.ConfigurationException;
-import org.apache.commons.configuration2.plist.PropertyListConfiguration;
-
-import java.io.File;
-import java.util.List;
+import org.example.SingleSensorType.SensorTypeFactory;
 
 public class Main {
     public static void main(String[] args) throws InstantiationException {

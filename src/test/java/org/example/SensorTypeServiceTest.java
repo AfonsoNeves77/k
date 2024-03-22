@@ -1,11 +1,11 @@
 package org.example;
 
 
+import org.example.SingleSensorType.*;
 import org.junit.Test;
 import org.mockito.MockedConstruction;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -43,7 +43,7 @@ public class SensorTypeServiceTest {
             SensorTypeID sensorTypeID = sensorTypeIDMockedConstruction.constructed().getLast();
             UnitVO unitVO = unitVOMockedConstruction.constructed().getLast();
 
-            when(sensorTypeFactory.createSensorType(sensorTypeID, unitVO)).thenReturn(sensorTypeDouble); //Para depois não dar merda no save do repo???
+//            when(sensorTypeFactory.createSensorType(sensorTypeID, unitVO)).thenReturn(sensorTypeDouble); //Para depois não dar merda no save do repo???
             //sensorTypeListDoubles.add(sensorTypeDouble);
 
             List<SensorType> listOfSensorTypes = sensorTypeService.getAllSensorTypes();
