@@ -1,5 +1,7 @@
 package org.example.SingleSensorType;
 
+import org.example.Type;
+
 public class SensorTypeID {
 
     private Type sensorTypeID;

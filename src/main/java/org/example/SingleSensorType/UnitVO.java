@@ -1,5 +1,7 @@
 package org.example.SingleSensorType;
 
+import org.example.Unit;
+
 public class UnitVO {
 
     private Unit unit;

@@ -1,8 +1,5 @@
 package org.example.SingleSensorType;
 
-import org.example.SingleSensorType.SensorTypeID;
-import org.example.SingleSensorType.UnitVO;
-
 public class SensorType {
 
     private SensorTypeID sensorTypeID;
