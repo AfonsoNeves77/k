@@ -1,15 +1,12 @@
 package org.example;
-import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.example.DDD.FactorySensorType;
 import org.example.DDD.RepositorySensorType;
-import org.example.DDD.Service;
-import org.example.DDD.ServiceSensorType;
 
 public class Main {
     public static void main(String[] args) throws InstantiationException {
 
-        RepositorySensorType repositorySensorType = new RepositorySensorType();
-        FactorySensorType factorySensorType = new FactorySensorType();
+//        RepositorySensorType repositorySensorType = new RepositorySensorType();
+//        FactorySensorType factorySensorType = new FactorySensorType();
 
 
 //        ServiceSensorType sensorTypeService = new ServiceSensorType(factorySensorType,repositorySensorType);
@@ -33,9 +30,16 @@ public class Main {
 //        System.out.println(sensorTypeService.getAllDefineSensorTypes());
 
 
-        Service sensorService = new Service(factorySensorType,repositorySensorType);
+//        Service sensorService = new Service(factorySensorType,repositorySensorType);
+//
+//        System.out.println(sensorService.getAllDefineSensorTypes());
+//
+//
+//        Map<Type,Unit> hashMapTypeUnit = new HashMap<>();
+//        hashMapTypeUnit.put(Type.Humidity,Unit.Percentage);
 
-        System.out.println(sensorService.getAllDefineSensorTypes());
+
+
 
 
 

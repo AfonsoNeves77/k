@@ -7,7 +7,6 @@ public class SensorType {
 
 
     //ValidateNUll!!!
-
     public SensorType(SensorTypeID sensorTypeID, UnitVO unit){
         this.sensorTypeID = sensorTypeID;
         this.Unit = unit;

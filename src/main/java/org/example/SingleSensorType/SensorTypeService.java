@@ -13,9 +13,14 @@ public class SensorTypeService {
     private SensorTypeFactory sensorTypeFactory;
     private SensorTypeRepository sensorTypeRepository;
 
-    public SensorTypeService(SensorTypeRepository sensorTypeRepository,SensorTypeFactory sensorTypeFactory) throws InstantiationException {
+    private SensorTypeMapper sensorTypeMapper;
+
+    //Inject Mapper
+
+    public SensorTypeService(SensorTypeRepository sensorTypeRepository,SensorTypeFactory sensorTypeFactory,SensorTypeMapper sensorTypeMapper) throws InstantiationException {
         this.sensorTypeFactory = sensorTypeFactory;
         this.sensorTypeRepository = sensorTypeRepository;
+        this.sensorTypeMapper = sensorTypeMapper;
 
         try {
             populateSensorTypeRepository();
@@ -35,8 +40,8 @@ public class SensorTypeService {
 
             String[] separateConfig = separateConfigurations(s);
 
-            SensorTypeID sensorTypeID = new SensorTypeID(separateConfig[0]);
-            UnitVO unit = new UnitVO(separateConfig[1]);
+            SensorTypeID sensorTypeID = sensorTypeMapper.createSensorTypeID(separateConfig[0]);
+            UnitVO unit = sensorTypeMapper.createUnitVO(separateConfig[1]);
 
             SensorType sensorType = sensorTypeFactory.createSensorType(sensorTypeID, unit);
 

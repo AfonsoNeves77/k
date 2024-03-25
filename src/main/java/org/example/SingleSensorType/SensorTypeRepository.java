@@ -3,6 +3,7 @@ package org.example.SingleSensorType;
 import org.example.SingleSensorType.SensorType;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SensorTypeRepository {
@@ -13,7 +14,6 @@ public class SensorTypeRepository {
         sensorTypeIDSensorTypeMap.put(sensorType.getSensorTypeID(),sensorType);
         return true;
     }
-
 
     public Iterable<SensorType> findAll(){
         return sensorTypeIDSensorTypeMap.values();
