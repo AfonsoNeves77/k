@@ -9,3 +9,4 @@ public interface Repository<T> {
     Iterable<T> getAll();
     boolean isPresent(SensorTypeID id);
 }
+
