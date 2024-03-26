@@ -1,12 +1,17 @@
 package org.example;
+import org.apache.commons.configuration2.Configuration;
+import org.apache.commons.configuration2.builder.fluent.Configurations;
+import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.example.SingleSensorType.*;
 import org.example.sensor.Sensor;
 import org.example.sensor.TempSensor;
 import org.example.sensor.impRepo;
 import org.example.sensor.parametrizedRepo;
 
+import java.io.File;
+
 public class Main {
-    public static void main(String[] args) throws InstantiationException {
+    public static void main(String[] args) throws InstantiationException, ConfigurationException {
 
 //        RepositorySensorType repositorySensorType = new RepositorySensorType();
 //        FactorySensorType factorySensorType = new FactorySensorType();
@@ -57,6 +62,11 @@ public class Main {
         parametrizedRepo.save((Sensor) domainEntity);
 
         impRepo.save((DomainEntity) sensor);
+
+        Configurations configurations = new Configurations();
+        Configuration configuration = configurations.properties(new File("config.properties"));
+
+        System.out.println(configuration.getString("NC DC EC"));
 
 
 

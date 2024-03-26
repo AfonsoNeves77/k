@@ -1,12 +1,9 @@
 package org.example.SingleSensorType;
 
-import org.example.SingleSensorType.SensorType;
-
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class SensorTypeRepository {
+public class SensorTypeRepository implements Repository<SensorType> {
 
     private final Map<SensorTypeID, SensorType> sensorTypeIDSensorTypeMap = new HashMap<>();
 
@@ -15,9 +12,25 @@ public class SensorTypeRepository {
         return true;
     }
 
+    @Override
+    public SensorType getByID(SensorTypeID id) {
+        return null;
+    }
+
+    @Override
+    public Iterable<SensorType> getAll() {
+        return null;
+    }
+
+    @Override
+    public boolean isPresent(SensorTypeID id) {
+        return false;
+    }
+
     public Iterable<SensorType> findAll(){
         return sensorTypeIDSensorTypeMap.values();
     }
+
 
 
 }

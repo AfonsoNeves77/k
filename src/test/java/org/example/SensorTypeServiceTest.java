@@ -86,6 +86,7 @@ public class SensorTypeServiceTest {
         assertEquals(size,2);
 //        verify(factorySensorTypeDouble, times(1)).createSensorType("Humidity");
 
-
     }
+
+    //
 }
